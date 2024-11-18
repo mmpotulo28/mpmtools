@@ -1,0 +1,129 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	max-width: 100%;
+	margin-top: 50px;
+}
+
+.imageOptions {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+	background-color: #ddd;
+	color: black;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	gap: 20px;
+}
+
+.dropzone {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 2px dashed #ddd;
+	border-radius: 10px;
+	min-height: 200px;
+	width: 90%;
+	gap: 20px;
+}
+
+.dropzone:hover {
+	border-color: #007bff;
+	background-color: rgba(255, 255, 255, 0.11);
+}
+
+.container input[type="file"] {
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 10px;
+}
+
+.output {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+	width: 100%;
+	align-items: center;
+	justify-items: center;
+}
+
+.image {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background-color: #fff;
+	min-width: 80%;
+	max-width: 400px;
+	gap: 20px;
+	color: black;
+}
+
+.image div:nth-child(1) {
+	border-right: 2px solid #ddd;
+}
+
+.image h1 {
+	color: #0056b3;
+}
+
+.image p {
+	margin: 5px 0;
+	text-wrap: break-word;
+	overflow: auto;
+	max-width: 100%;
+	display: flex;
+	max-width: 500px;
+	scrollbar-width: thin;
+	scrollbar-color: #007bff;
+	scrollbar-track-color: #007bff;
+}
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	grid-column: 1 / -1;
+}
+
+.controlsInline {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	grid-column: 1 / -1;
+	gap: 20px;
+}
+
+.container button {
+	margin-top: 10px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.container button:hover {
+	background-color: #0056b3;
+}
+
+.container progress {
+	width: 100%;
+	margin-top: 10px;
+	grid-column: 1 / -1;
+}
