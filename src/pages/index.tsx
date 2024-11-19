@@ -31,6 +31,9 @@ export default function Home() {
 					<Link href={"./image"} className={styles.tool}>
 						Image Optimization
 					</Link>
+					<Link href={"./snippets"} className={styles.tool}>
+						Code Snippets
+					</Link>
 				</main>
 				<footer className={styles.footer}>
 					<span>still in development</span>
