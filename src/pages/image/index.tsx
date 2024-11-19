@@ -100,7 +100,8 @@ const ImageNameReWrite: React.FC = () => {
 									...newImages[index],
 									name: `${image.name
 										.replace(/\.[^/.]+$/, "")
-										.replace(/[^a-z0-9.]/gi, "_")
+										.replace(/%20/g, "_")
+										.replace(/[^a-z0-9_]/gi, "_")
 										.toLowerCase()}`,
 									file: image.file,
 									url: newImgURL,
@@ -145,12 +146,19 @@ const ImageNameReWrite: React.FC = () => {
 		}
 	};
 
-	const handleSaveAllAsImage = () => {
-		images.forEach((_, index) => handleSaveAsImage(index));
+	const handleSaveAllAsImage = async () => {
+		for (let index = 0; index < images.length; index++) {
+			await handleSaveAsImage(index);
+		}
 	};
 
 	const handleReset = () => {
 		setImages([]);
+		setOriginalImages([]);
+		const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+		if (fileInput) {
+			fileInput.value = "";
+		}
 	};
 
 	const formatFileSize = (size: number) => {
